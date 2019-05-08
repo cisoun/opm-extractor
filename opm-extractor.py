@@ -27,7 +27,7 @@ def extract(path):
 
     for file in files:
         location = file.getAttribute('Location')
-        name = location.split('/')[-1]
+        name = location.replace('/', '.')
         data = file.firstChild.data
 
         print('Extracting %s' % name)
